@@ -1,0 +1,19 @@
+#!/system/bin/sh
+
+# ENTWARE_PROFILE is defined in /system/etc/mkshrc and in
+# /system/etc/profile.  See the Magisk's Entware startup script for
+# additional details (usually /data/adb/modules/entware-magisk/entware.sh).
+
+# Load profile (if required) - most of the terminal emulators on Android
+# do not invoke the login shell. Thus, we are going to load the file manually
+# to initialise the environmental variables properly (including PATH).
+#
+# PROFILE_SCRIPT_LOADED is defined in profile to avoid extra profile invocation.
+if [ -r "$ENTWARE_PROFILE" ] && [ "$PROFILE_SCRIPT_LOADED" != "$(id -u)" ]; then
+    . "$ENTWARE_PROFILE"
+fi
+
+# Load user interactive shell initialisation file.
+if [ -n "$HOME" ] && [ -r "$HOME/.mkshrc" ]; then
+    . "$HOME/.mkshrc"
+fi
