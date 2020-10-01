@@ -1,7 +1,7 @@
 #!/system/bin/sh
 
 if [ -z "$MODPATH" ]; then
-    MODPATH="$ANDROID_DATA/adb/modules/entware-magisk"
+    MODPATH="/data/adb/modules/entware-magisk"
 fi
 
 # Create empty login shell and interactive shell initialisation script files if necessary.

@@ -3,7 +3,7 @@
 ## The changes made by this script are NOT permanent and,
 # thus, need to be repeated on each boot of the device.
 
-ENTWARE_INSTALLATION_PATH="$ANDROID_DATA/entware-magisk"
+ENTWARE_INSTALLATION_PATH="/data/entware-magisk"
 ENTWARE_MKSHRC="$ENTWARE_INSTALLATION_PATH/mkshrc"
 ENTWARE_PROFILE="$ENTWARE_INSTALLATION_PATH/profile"
 ENTWARE="$ENTWARE_INSTALLATION_PATH/entware"

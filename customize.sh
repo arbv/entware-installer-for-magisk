@@ -1,7 +1,7 @@
 #!/system/bin/sh
 
 # where we are going to put the support files
-ENTWARE_INSTALLATION_PATH="$ANDROID_DATA/entware-magisk"
+ENTWARE_INSTALLATION_PATH="/data/entware-magisk"
 ENTWARE="${ENTWARE_INSTALLATION_PATH}/entware"
 
 # default DNS resolvers
