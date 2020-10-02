@@ -37,7 +37,7 @@ Please note that modifying the "system" partition makes the installation *non-sy
 $ su -l
 ```
 
-remounting root file system for reading and writing:
+remounting root file system for reading and writing (**issuing the following command may tamper block verification on some devices**):
 
 ```
 # mount -o remount,rw /
