@@ -20,6 +20,7 @@ if ! [ -d "$ENTWARE" ]; then
     exit 1
 fi
 
+# ensure that some directories exist
 ensure_dir_exists()
 {
     if [ -n "$1" ] && ! [ -d "$1"  ]; then
@@ -29,6 +30,10 @@ ensure_dir_exists()
         fi
     fi
 }
+
+ensure_dir_exists "$ENTWARE/tmp" 777
+ensure_dir_exists "$ENTWARE/var"
+ensure_dir_exists "$ENTWARE/var/run" 755
 
 ## Here we try to tune the Android's filesystem to be more Unix
 ## compatible. It is going to work only on devices which use ramdisk
@@ -59,19 +64,16 @@ if [ "$(grep rootfs /proc/mounts  | cut -d " " -f 2)" = "/" ]; then
     # Link /var to /opt/var (mostly for busybox crond, if we are going to
     # use one).
     if ! [ -d /var ]; then
-        ensure_dir_exists "$ENTWARE/var"
         ln -sf "$ENTWARE/var" /var
     fi
 
     # Create /tmp (again, mostly for Entware).
     if ! [ -d /tmp ]; then
-        ensure_dir_exists "$ENTWARE/tmp" 777
         ln -sf "$ENTWARE/tmp" /tmp
     fi
 
     # Create /run.
     if ! [ -d /run ]; then
-        ensure_dir_exists "$ENTWARE/var/run" 755
         ln -sf "$ENTWARE/var/run" /run
     fi
 
