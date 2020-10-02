@@ -60,7 +60,7 @@ After you have figured out how to make the required changes and made them, you m
 
 Currently, this module is not available in the official repository of the Magisk modules. But you can install it manually:
 
-1. Download the module to your phone's storage from the projects' [**Releases** section](releases/latest).
+1. Download the module to your phone's storage from the projects' [**Releases** section](../../releases/).
 2. In **Magisk Manager**, open the sidebar and select **Modules**.
 3. Hit the floating button with a plus sign, then locate the downloaded module.
 4. Open it. It will begin installation right away.
