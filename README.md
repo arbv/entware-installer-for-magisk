@@ -4,6 +4,8 @@ This repository contains a [Magisk](https://magiskmanager.com/) module that can 
 
 Entware, when being installed using this module, actually makes it possible for the [available software packages](https://bin.entware.net/armv7sf-k3.2/Packages.html) to extend the functionality of the Android-powered device and turn it into a more or less real Linux-powered system with a full-featured package manager. Nevertheless, the installation remains *systemless*: it does not make any modifications to the "system" partition and is fully reversible.
 
+The module was announced in [this post](https://chaoticlab.io/posts/entware-installer-for-magisk/).
+
 **This module should be compatible with most devices running Android 8 and below. For devices running Android 9 and newer manual intervention may be required before the installation. More on this below.**
 
 *If you find this project useful, you may want to support the author and make a small [donation](https://chaoticlab.io/donate/).*
