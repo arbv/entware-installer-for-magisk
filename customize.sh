@@ -123,6 +123,8 @@ if ! [ -x "${ENTWARE_INSTALLATION_PATH}/entware/bin/opkg" ]; then
         fi
         mount -o remount,ro /
         die_on_error "Cannot remount \"\\\" readonly!"
+    else
+        ui_print "Your device appears to have a real-partition as the root file system. Hopefully, you have created the required links beforehand (see the module's documentation for details)."
     fi
     # check if /bin/sh available
     if ! [ -x /bin/sh ]; then
